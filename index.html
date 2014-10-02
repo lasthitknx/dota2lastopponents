@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PLAYER {{id}} LAST GAMES</title>
+<style>
+    body{
+        margin:0px;
+    }
+    .t1{
+        font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+        font-size:43px;
+    }
+    .t2{
+        font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+        font-size:22px;
+    }
+    a:link{
+        text-decoration: none;
+        color:#47A3FF;
+    }
+    a:visited{
+        text-decoration: none;
+        color:#47A3FF;
+    }
+    a:active{
+        text-decoration: underline;
+        color:#47A3FF;
+    }
+    a:hover{
+        text-decoration: underline;
+        color:#47A3FF;
+    }
+</style>
+</head>
+<body>
+%for item in data:
+<div style="margin:5px;">
+    <div style="display:inline-block;">
+        <img src="{{data[item][5]}}">
+    </div>
+    <div style="display:inline-block;margin-left:5px;">
+        <span class="t1"><a href="http://dotabuff.com/players/{{data[item][4]}}">{{item}}</a></span><br>
+        <span class="t2">TOTAL GAMES : {{data[item][0]}}</span><br>
+        <span class="t2">WINS : {{data[item][1]}}</span><br>
+        <span class="t2">LOSES : {{data[item][2]}}</span><br>
+        <span class="t2">WINRATE : {{data[item][3]}}</span><br>
+    </div>
+</div>
+</body>
+</html>
